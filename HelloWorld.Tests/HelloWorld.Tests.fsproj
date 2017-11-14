@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>HelloWorld.Tests</RootNamespace>
     <AssemblyName>HelloWorld.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Name>HelloWorld.Tests</Name>
   </PropertyGroup>
@@ -33,13 +33,19 @@
     <OtherFlags>--warnon:1182</OtherFlags>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.4.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\FSharp.Core.4.2.3\lib\net45\FSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FsUnit.NUnit, Version=3.1.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\FsUnit.3.1.0-beta2\lib\net46\FsUnit.NUnit.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
+    <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb">
+      <HintPath>..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <Reference Include="FSharp.Core">
-      <HintPath>..\packages\FSharp.Core.4.1.18\lib\net45\FSharp.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System.ValueTuple">
       <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
     </Reference>
@@ -47,6 +53,7 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="HelloWorld.Tests.fs" />
+    <None Include="packages.config" />
     <None Include="Script.fsx" />
   </ItemGroup>
   <ItemGroup>

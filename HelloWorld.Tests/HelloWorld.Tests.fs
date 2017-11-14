@@ -1,4 +1,8 @@
-﻿namespace HelloWorld.Tests
+﻿module HelloWorld.Tests.Hello
 
-type Class1() = 
-    member this.X = "F#"
+open HelloWorld.Core.Hello
+open NUnit.Framework
+open FsUnit
+
+[<Test>]
+let shouldSayHello () = Assert.AreEqual("Hello World!", SayHello "World")

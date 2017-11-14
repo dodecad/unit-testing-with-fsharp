@@ -1,4 +1,5 @@
 ﻿namespace HelloWorld.Core
 
-type Class1() = 
-    member this.X = "F#"
+module Hello =
+    let SayHello name = "Hello " + name + "!"
+    
