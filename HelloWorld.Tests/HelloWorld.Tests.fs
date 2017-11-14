@@ -6,3 +6,6 @@ open FsUnit
 
 [<Test>]
 let shouldSayHello () = Assert.AreEqual("Hello World!", SayHello "World")
+
+[<Test>]
+let shouldSayHelloWithFsUnit () = SayHello "World" |> should equal "Hello World!"
